@@ -1,0 +1,36 @@
+.footer {
+    
+    ul.menu {
+        display: flex;
+        flex-wrap: wrap;
+        width: max-content;
+        @media (max-width: $below-tablet) { display: block; }
+        margin: 0 auto;
+        max-width: 800px;
+        justify-content: space-around;
+        text-align: center;
+
+        li {
+            margin: 0;
+            padding: 0;
+            position: relative;
+
+            &:before {
+                content: '';
+                display: none;
+            }
+
+            a {
+                padding: 1rem;
+                @media (max-width: $below-tablet) { padding: 0.5rem; }
+                color: $white;
+                display: block;
+                font-size: 0.8rem;
+            }
+
+            ul {
+                display: none;
+            }
+        }
+    }
+}

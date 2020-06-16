@@ -1,0 +1,63 @@
+::selection {   
+    background: $brand-four;
+    color: $brand-one;
+}
+
+body {
+    font-family: $body-font;
+    overflow-x: hidden;
+
+    * {
+        outline: none;
+    }
+}
+
+// form styling defaults -----
+// excludes conflicting editing mode ui
+
+form { position: relative; }
+
+html:not(.fl-builder-edit) {
+
+    input { @include input(); }
+
+    input[type="radio"] {
+        min-width: 1rem;
+        width: 1rem;
+    }
+
+    // custom select styling
+    .select2-container--default .select2-selection--single {
+        border: none;
+        position: relative;
+        background: $offwhite;
+        padding: 0.7rem 0 0 0.3rem;
+        height: 3rem;
+  
+        .select2-selection__arrow {
+            position: absolute;
+            top: 0.7rem;
+            right: 1rem;
+        }
+    }
+}
+
+button {
+    @include button();
+}
+
+.z-index-bump {
+    position: relative;
+    z-index: 10;
+}
+
+// hide page titles
+h1.entry-title {
+    display: none;
+}
+
+// hide footer and other default wordpress modules
+#colophon,
+#recent-posts-2 {
+    display: none;
+}

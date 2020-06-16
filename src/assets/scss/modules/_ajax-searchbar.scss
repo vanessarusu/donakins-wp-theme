@@ -1,0 +1,29 @@
+// ajax search styling
+
+html .dgwt-wcas-details-wrapp {
+    
+    .woocommerce-Price-amount.amount {
+        color: $brand-one;
+    }
+
+    .dgwt-wcas-pd-addtc-form {
+        justify-content: space-between;
+    }
+    
+    form {
+
+        .quantity {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        input {
+            min-width: 1rem;
+            width: 8rem;
+        }
+
+        .woocommerce-Price-amount {
+            color: $brand-one;
+        }
+    }
+}

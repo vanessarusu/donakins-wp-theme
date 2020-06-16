@@ -1,0 +1,238 @@
+header {
+    // cart icon area --
+    .site-header-cart {
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+        top: 0.2rem;
+        right: 2.5rem;
+        padding: 0.4rem;
+        font-size: 0.9rem;
+        @media (max-width: $small-desktop) { font-size: 0.7rem; }
+        @media (max-width: $below-tablet) { 
+            background: $brand-three;  
+            padding: 0.6rem;
+            top: 0;
+            width: 100%;
+            justify-content: flex-end;
+            right: 0;
+        }
+
+        a {
+            color: $brand-one;
+        }
+
+        .count {
+            padding: 0 0.3rem;
+        }
+
+        .cart-contents {
+
+            &:after {
+                content: '\f07a';
+                margin-top: -0.2rem;
+                font-family: 'FontAwesome';
+            }
+
+            .woocommerce-Price-amount {
+                display: none;
+            }
+        }
+
+        // hover flyout on hover --
+        &:hover {
+            @media(min-width: $tablet) {
+                .widget.woocommerce.widget_shopping_cart {
+                    display: flex;
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        .my-account-link {
+            margin-left: 0.8rem;
+            padding-left: 0.8rem;
+            color: $brand-one;
+            border-left: 1px solid $brand-two;
+            position: relative;
+
+            a {
+                width: 1.5rem;
+                padding-left: 0.8rem;
+                height: 0.9rem;
+                
+                display: block;
+                font-size: 0.9rem;
+            }
+
+            &:after {
+                content: '\f2bd';
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                margin: auto;
+                display: block;
+                font-family: 'FontAwesome';
+                pointer-events: none;
+                cursor: pointer;
+                font-size: 1.1rem;
+                @media (max-width: $small-desktop) { font-size: 0.9rem; }
+            }
+        }
+    }
+
+    .site-search {
+        position: absolute; 
+        right: 2rem;
+        top: 2.2rem;
+        @media (max-width: $small-desktop) { top: 1.8rem; }
+        @media (max-width: $below-tablet) { display: none; }
+
+        form {
+            display: flex;
+            position: relative;
+
+            &:before {
+                right: 1rem;
+                @media (max-width: $small-desktop) { top: 0.4rem; }
+                left: auto;
+                color: $brand-two;
+                z-index: -10;
+            }
+        }
+
+        .search-field {
+            font-family: $body-font;
+            font-size: 0.8rem;
+            background: $offwhite;
+        }
+
+        input {
+            padding: 0.8rem;
+            @media (max-width: $small-desktop) { padding: 0.3rem; min-width: 10rem; }
+            width: 100%;
+            min-width: 18rem;
+            border: none;
+            outline: none;
+            transition: all 0.1s ease;
+
+            &:focus {
+                border-bottom: 2px solid $brand-two;
+                ~ button {
+                    background: $brand-two;
+                    color: $white;
+                }
+            }
+        }
+
+        button {
+            width: 50px;
+            display: block;
+            border: 0;
+            background: transparent;
+            color: transparent;
+            transition: all 0.1s ease;
+
+            &:focus {
+                background: $brand-two;
+                color: $white;
+            }
+        }
+    }
+}
+
+.site-header-cart .widget_shopping_cart .woocommerce-mini-cart__empty-message { display: none; }
+    
+.widget.woocommerce.widget_shopping_cart {
+    position: fixed;
+    transform: translateX(120%);
+    right: 0;
+    background: $white;
+    box-shadow: 1px 1px 30px 1px rgba($black, 0.15);
+    max-height: 800px;
+    top: 5rem;
+    margin: auto;
+    z-index: 100;
+    transition: all 0.15s ease-in;
+
+    .widget_shopping_cart_content {
+
+        .woocommerce-mini-cart-item {
+            position: relative;
+            padding: 2rem 2rem 2rem 3rem;
+
+            &:nth-child(odd) {
+                background: $offwhite;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                align-content: flex-start;
+                width: 200px;
+                font-size: 1rem;
+            }
+
+            .remove.remove_from_cart_button {
+                padding: 0.5rem;
+                left: 0.2rem;
+                position: absolute;
+                height: 100%;
+                color: transparent;
+                width: 2rem;
+
+                &:before {
+                    top: 10%;
+                    content: '\f057';
+                    font-family: "FontAwesome";
+                    font-size: 1.2rem;
+                }
+            }
+
+            img {
+                max-width: 60px;
+                height: auto;
+                margin-right: 0.5rem;
+            }
+
+            .quantity {
+                margin-top: -1rem;
+                display: block;
+                font-size:  0.8rem;
+                color: $brand-one;
+            }
+        }
+
+        .woocommerce-mini-cart__total.total {
+            margin-top: 2rem;
+            color: $brand-one;
+            font-size: 1rem;
+        }
+        
+        .woocommerce-mini-cart__buttons {
+            margin: 2rem 0 1rem;
+
+            a {
+                display: block;
+                margin: 0.5rem auto;
+                border: 1px solid $brand-one;
+                padding: 1rem;
+                max-width: 80%;
+                font-size: 0.8rem;
+
+                &:first-of-type {
+                    background: $brand-one;
+                    color: $white;
+                }
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

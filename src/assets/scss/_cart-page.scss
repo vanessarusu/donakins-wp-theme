@@ -1,0 +1,249 @@
+.woocommerce-cart {
+    .entry-title {
+        display: none;
+    }
+
+    .woocommerce-cart-form {
+
+        table {
+            width: 100%;
+        }
+
+        thead {
+            background: $brand-one;
+            color: $white;
+
+            tr {
+                th {
+                    padding: 1rem;
+                    text-align: left;
+                }
+            }
+        }
+
+        tbody {
+
+            img {
+                max-width: 70px;
+                height: auto;
+            }
+
+            tr {
+                &:nth-child(even):not(:last-of-type) {
+                    background: $offwhite;
+                }
+                &:last-of-type {
+                    td {
+                        padding: 30px 0;
+                    }
+                }
+            }
+
+            td {
+                vertical-align: middle;
+                padding: 10px 0;
+
+                &.product-remove {
+
+                    a {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                &.product-quantity {
+
+                    input {
+                        border: none;
+                        outline: none;
+                        padding: 10px;
+                        min-width: 0;
+                        width: auto;
+                        background: transparent;
+                    }
+                }
+
+                .coupon {
+                    float: left;
+                    width: 70%;
+
+                    label {
+                        display: none;
+                    }
+
+                    input {
+                        max-width: 280px;
+                        font-size: 0.8rem;
+                        @media (max-width: $small-desktop) {
+                            padding: 1rem;
+                        }
+                    }
+
+                    button {
+                        @include button(transparent, $brand-one);
+                        border: 1px solid $brand-two;
+                        font-size: 0.8rem;
+                        padding: 0.8rem 1.2rem;
+                        margin: 0;
+                    }
+                    &~button {
+                        float: right;
+                        margin-top: 0;
+                    }
+                }
+
+                button {
+                    &[disabled] {
+                        background: $offwhite;
+                        color: rgba($brand-one, 0.4);
+                    }
+                }
+            }
+
+            a {
+                color: $brand-one;
+                transition: all 0.1s ease;
+                &:hover {
+                    @media (min-width: $tablet) {
+                        color: $brand-two;
+                    }
+                }
+            }
+        }
+
+        // responsive table
+        @media (max-width: $tablet) {
+            table.shop_table_responsive {
+                font-size: 0.9rem;
+                thead {
+                    display: none;
+                }
+                .cart_item {
+                    position: relative;
+                }
+                tr:not(:last-of-type) {
+                    display: grid;
+                    grid-template-columns: 70px 1fr;
+                    padding: 2rem 0 2rem 2rem;
+    
+                    .product-remove {
+                        position: absolute;
+                        grid-column: 1;
+                        left: -2.3rem;
+                        top: 30%;
+                        z-index: 100;
+                        width: 3rem;
+    
+                        a {
+                             color: $brand-one;
+
+                            &:before {
+                                font-size: 1rem;
+                                color: $brand-one;
+                            }
+                        }
+                    }
+
+                    td {
+                        padding: 0.2rem;
+
+                        input {
+                            height: 0;
+                        }
+                         
+                        img {
+                            max-width: 50px;
+                        }
+                         
+                        &[data-title]::before {
+                            content: attr(data-title);
+                            float: left;
+                            margin-right: 1rem;
+                            display: block;
+                            width: 80px;
+                        }
+                    }
+                    .product-thumbnail {
+                        grid-column: 1;
+                        height: 0;
+                    }
+                    td:not(.product-thumbnail, .product-remove) {
+                        grid-column: 2;
+                    }
+                }
+                tr:last-of-type {
+                    margin: 0 auto;
+                    text-align: center;                    
+                    .coupon, input, button {
+                        width: 100%;
+                        max-width: 100%;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .cart_totals {
+        border-top: 2px solid $brand-one;
+        padding-top: 2rem;
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        table {
+            width: 100%;
+            font-size: 0.9rem;
+        }
+
+        tr {
+            th {
+                padding: 1rem;
+                text-align: left;
+                font-style: italic;
+            }
+            .shipping-calculator-button {
+                color: $brand-one;
+                text-decoration: underline;
+                font-style: italic;
+                margin: 1rem 0;
+                display: block;
+            }
+
+            &:nth-child(odd) {
+                background: $offwhite;
+            }
+        }
+
+        .checkout-button {
+            @include button();
+            float: right;
+            margin-top: 2rem;
+            @media (max-width: $tablet) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.woocommerce-shipping-totals {
+    #shipping_method.woocommerce-shipping-methods {
+        margin-bottom: 1rem;
+        li {
+            padding: 0.5rem 0;
+            input {
+                width: 1rem;
+                min-width: 1rem;
+            }
+            label {
+                display: inline-block;
+            }
+        }
+    }
+    p.woocommerce-shipping-destination {
+        font-size: 1rem;
+    }
+}
+

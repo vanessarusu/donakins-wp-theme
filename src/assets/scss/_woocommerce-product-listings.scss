@@ -1,0 +1,60 @@
+// pricing styles are in separate
+// module as styles are shared with sku page
+
+.woocommerce {
+    ul.products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 240px);
+        @media (max-width: $phone) { grid-template-columns: repeat(auto-fit, 140px);}
+        justify-content: space-around;
+        margin: 0 auto;
+
+        .product {
+            text-align: center;
+            position: relative;
+            margin: 2rem 0.2rem;
+            @media (max-width: $phone) { margin: 1rem auto; }
+
+            img {
+                max-width: 220px;
+                @media (max-width: $phone) { max-width: 140px; }
+                height: auto;
+                margin-bottom: 1rem;
+                
+            }
+
+            h2 {
+                font-size: 1rem;
+                @media (max-width: $phone) { font-size: 0.8rem; }
+                color: $brand-one;
+                margin-bottom: 0.5rem;
+            }
+
+            .onsale {
+                position: absolute;
+                top: -1rem;
+                left: -0.2rem;
+                background: $brand-one;
+                width: 3rem;
+                height: 3rem;
+                line-height: 3rem;
+                color: $white;
+                border-radius: 50%;
+            }
+
+            .star-rating { display: none; }  
+
+            .sub-category-name {
+                display: block;
+                font-style: italic;
+                font-size: 0.8rem;
+                margin: 0.3rem auto;
+                color: lighten($brand-one, 30%);
+            }
+
+            .add_to_cart_button {
+                display: none;
+            }
+        }
+    }
+}

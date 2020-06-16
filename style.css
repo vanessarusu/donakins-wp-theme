@@ -1,0 +1,87 @@
+/*
+CTC Separate Stylesheet
+Updated: 2020-05-09 22:17:08
+Theme Name: Storefront Child
+Theme URI: https://woocommerce.com/storefront/
+Template: storefront
+Author: Vanessa Rusu
+Author URI: https://vanessarusu.com/
+Description: Storefront is the perfect theme for your next WooCommerce project. Designed and developed by WooCommerce Core developers, it features a bespoke integration with WooCommerce itself plus many of the most popular customer facing WooCommerce extensions. There are several layout &amp; color options to personalise your shop, multiple widget regions, a responsive design and much more. Developers will love its lean and extensible codebase making it a joy to customize and extend. Looking for a WooCommerce theme? Look no further!
+Tags: e-commerce,two-columns,left-sidebar,right-sidebar,custom-background,custom-colors,custom-header,custom-menu,featured-images,full-width-template,threaded-comments,accessibility-ready,rtl-language-support,footer-widgets,sticky-post,theme-options,editor-style
+Version: 2.5.6.1589077028
+*/
+
+
+.col-full {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+}
+
+body {
+    font-family: 'IvyJournal', sans-serif;
+}
+
+.site-branding {
+    width: 100%;
+    float: none;
+    display: block;
+    text-align: center;
+}
+
+.site-branding img {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.site-search {
+    display: inline;
+}
+
+
+
+
+
+
+
+
+/* .woocommerce-active .site-branding {
+    float: left; }
+  
+  .site-header-cart {
+    list-style-type: none;
+    margin-left: 0;
+    padding: 0;
+    margin-bottom: 0; }
+    .site-header-cart .cart-contents {
+      display: none; }
+    .site-header-cart .widget_shopping_cart {
+      display: none; }
+      .site-header-cart .widget_shopping_cart .woocommerce-mini-cart__empty-message {
+        margin: 1.41575em; }
+      .site-header-cart .widget_shopping_cart .product_list_widget img {
+        margin-left: 1em; }
+  
+  .site-search {
+    font-size: 0.875em;
+    clear: both;
+    display: none; }
+    .site-search .widget_product_search input[type=text],
+    .site-search .widget_product_search input[type=search] {
+      padding: 1em 1.41575em;
+      line-height: 1; }
+    .site-search .widget_product_search form::before {
+      top: 1.15em;
+      left: 1.15em; }
+    .site-search .widget_product_search #searchsubmit {
+      border: 0;
+      clip: rect(1px, 1px, 1px, 1px);
+      -webkit-clip-path: inset(50%);
+      clip-path: inset(50%);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+      word-wrap: normal !important; } */

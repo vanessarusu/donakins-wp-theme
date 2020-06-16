@@ -1,0 +1,18 @@
+.headshot {
+    position: relative;
+  
+    .fl-photo-img-jpg {
+      transform: rotate(-10deg);
+      border: 15px solid white;
+      box-shadow: 2px 2px 30px 0px  rgba($brand-two, 0.5);
+      margin-right: -70px;
+    }
+    
+    &.two {
+      
+      .fl-photo-img-jpg {
+        transform: rotate(10deg);
+        margin-right: 0;
+      }
+    }
+  }

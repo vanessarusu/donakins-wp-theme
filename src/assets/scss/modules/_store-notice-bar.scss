@@ -1,0 +1,30 @@
+
+.woocommerce-store-notice,
+.woocommerce-store-notice.demo_store {
+    position: fixed;
+    bottom: 0;
+    background:$brand-four;
+    width: 100%;
+    padding: 0.8rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 0;
+    z-index: 1500;
+
+    &:before {
+        content: '\f07a';
+        font-size: 0.8rem;
+    }
+
+    .woocommerce-store-notice__dismiss-link {
+        float: right;
+        
+        &:before {
+            font-size: 0.8rem;
+            content: '\f00d' ;
+            @media(max-width: $tablet) {
+                content: '';
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.mailchimp-signup {
+
+    input {
+        @include input();
+        text-align: center;
+    }
+
+    .fl-form-success-message p {
+        text-align: center;
+        font-family: $body-font;
+        font-size: 1rem;
+    }
+
+    .fl-form-error-message {
+        color: $alert-color;
+    }
+    
+    .fl-form-field input.fl-form-error {
+        border-color: $alert-color;
+    }
+}

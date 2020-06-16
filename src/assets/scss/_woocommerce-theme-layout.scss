@@ -1,0 +1,24 @@
+.woocommerce-page {
+    .site-content {
+      @include wrapper();
+    }
+    
+    .site-content > .col-full {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    #primary {
+      flex-grow: 1;
+      @media (max-width: $small-desktop) {
+          width: 100%;
+      }
+    }
+
+    .widget-area {
+        @media (max-width: $small-desktop) {
+            width: 100%;
+        }
+    }
+  }

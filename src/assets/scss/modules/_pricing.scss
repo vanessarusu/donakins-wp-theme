@@ -1,0 +1,18 @@
+.woocommerce {
+    .product {
+        .price {
+            color: $brand-one;
+
+            .amount,
+            .onsale, 
+            .add_to_cart_button {
+                font-size: 1rem;
+                font-family: $sans-serif;
+            }
+        
+            ins {
+                color: $alert-color;
+            }
+        }
+    }
+}

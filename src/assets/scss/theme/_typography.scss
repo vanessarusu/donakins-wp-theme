@@ -1,0 +1,55 @@
+$body-font: 'IvyJournal', sans-serif;
+$sans-serif: 'mr-eaves-xl-sans', sans-serif;
+
+body {
+    color: $brand-one;
+}
+h1,h2,h3,h4,h5,h6 { 
+    line-height: 1.2; 
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-family: $sans-serif;
+    letter-spacing: 0.3px;
+    font-size: 1.1rem;
+}
+
+a {
+    letter-spacing: 0.3px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+a { color: $brand-one; }
+
+p a {
+    color: unset;
+    text-decoration: underline;
+    color: $brand-one;
+}

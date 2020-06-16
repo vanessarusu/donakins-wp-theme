@@ -1,0 +1,13 @@
+.woocommerce-checkout-payment {
+
+    .wc_payment_method {
+
+        &.payment_method_paypal {
+            
+            img {
+                display: block;
+                max-width: 180px;
+            }
+        }
+    }
+}
