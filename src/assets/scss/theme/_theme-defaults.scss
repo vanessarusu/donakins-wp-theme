@@ -40,6 +40,10 @@ html:not(.fl-builder-edit) {
             right: 1rem;
         }
     }
+    input[type="checkbox"] {
+        min-width: auto;
+        width: auto;
+    }
 }
 
 button {

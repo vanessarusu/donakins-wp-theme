@@ -273,3 +273,34 @@
         display: none;
     }
 }
+
+
+// internet explorer fallback
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+    .type-product {
+        width: 100%;
+    }
+
+    .single-product {
+        #primary {
+            width: 100%;
+        }
+
+        .woocommerce-product-gallery {
+            width: 40%;
+            float: left;
+            margin-right: 7%;
+        }
+    }
+
+    .summary,
+    .woocommerce-tabs {
+        width: 50%;
+        float: left;
+    }
+
+    .related.products { clear: both;}
+}
+

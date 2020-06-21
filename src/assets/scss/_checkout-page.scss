@@ -38,6 +38,7 @@
             margin: 1rem 0 0.5rem;
             display: block;
             font-size: 0.9rem;
+            font-family: $body-font;
         }
 
         textarea {
@@ -70,14 +71,6 @@
         @media (max-width: $tablet) {
             float: none;
             width: 100%;
-        }
-    }
-
-    .woocommerce-shipping-fields {
-
-        input[type="checkbox"] {
-            min-width: auto;
-            width: auto;
         }
     }
 
@@ -283,4 +276,14 @@
 
 .woocommerce-customer-details {
     line-height: 2rem;
+}
+
+
+// mailchimp integration
+.woocommerce-checkout .woocommerce-checkout {
+    .mailchimp-newsletter {
+        label {
+            display: inline-block;
+        }
+    }
 }
